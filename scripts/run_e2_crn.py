@@ -19,6 +19,17 @@ extra = '''    for arm_name in arms:
         summary[arm_name]["fresh_share_error_below_0.3_by_category"] = fresh.groupby("category")["error"].apply(lambda e: round(float((e < 0.3).mean()), 3)).to_dict()
         summary[arm_name]["reused_share_error_below_0.3"] = round(float((frame[frame["free"]]["error"] < 0.3).mean()), 3)
         summary[arm_name]["identical_errors_to_full"] = bool(np.allclose(medians[arm_name], medians["full"])) if arm_name != "full" else None
+        table = {}
+        key = next((c for c in ("id", "question_id", "qid", "question") if c in frame.columns), None)
+        for (category, free), part in frame.groupby(["category", "free"]):
+            table.setdefault(category, {})["reused" if free else "fresh"] = {
+                "answers": int(len(part)), "questions": int(part[key].nunique()) if key else None,
+                "median_error": round(float(part["error"].median()), 3), "share_below_0.3": round(float((part["error"] < 0.3).mean()), 3)}
+        for free, part in frame.groupby("free"):
+            table.setdefault("all", {})["reused" if free else "fresh"] = {
+                "answers": int(len(part)), "questions": int(part[key].nunique()) if key else None,
+                "median_error": round(float(part["error"].median()), 3), "share_below_0.3": round(float((part["error"] < 0.3).mean()), 3)}
+        summary[arm_name]["by_category_and_source"] = table
 '''
 source = source.replace(tail, extra + tail)
 assert "final/e2.json" in source

@@ -1,10 +1,10 @@
 # UrbanEpi-Agent
 
-Code, derived results, and scripts for the paper *UrbanEpi-Agent: Privacy-Budgeted Federated Analytics and Selective LLM Reasoning for District-Level Disease Surveillance*.
+Code, derived results, and scripts for the paper *Privacy-Budgeted Federated Release with LLM Question Parsing for District-Level Disease Surveillance*.
 
-UrbanEpi-Agent lets several health institutions share district-level disease signals without sharing records. Each institution keeps its records and one differential-privacy budget, which pays for both continuous monitoring releases and ad-hoc questions. A language model turns plain-language questions into validated typed plans, and never writes the queries that run. A statistical gate that reads only private releases decides when the language model is called.
+UrbanEpi-Agent is the research prototype studied in the paper. It lets several health institutions share district-level disease signals without sharing records. Each institution keeps its records and one differential-privacy budget, which pays for both continuous monitoring releases and ad-hoc questions. A language model parses plain-language questions into validated typed plans, and never writes the queries that run. A call rule that reads only private releases decides when the language model is called.
 
-The evaluation uses 40,963 real surveillance records from Mexico City (16 boroughs, five simulated institutions) with injected outbreaks.
+The evaluation uses 40,963 real surveillance records from Mexico City in a simulated federation (16 boroughs, five institutions split from one public file) with injected outbreaks.
 
 ## Repository layout
 
@@ -61,9 +61,12 @@ python scripts/build_events.py
 | Latency, tokens, and overhead | `run_system_metrics.py` | `system_metrics.json` |
 | Review checks | `run_review_checks.py` | `review_checks.json` |
 | Second annotator | `score_second_annotator.py` | `second_annotator.json` |
+| Bootstrap intervals, alert load, validation-chosen thresholds, Farrington-type and scan baselines, shorter test period, run without IMSS | `run_supervisor_checks.py` | `supervisor_checks.json` |
+| Curves over 15 threshold draws (Figures 2 to 4) | `run_threshold_draws.py` | `threshold_draws.json` |
+| Rule-based pre-filter | `run_prefilter.py` | `prefilter.json` |
 | Figures 1 to 5 | `make_diagrams.py`, `make_figures.py` | `figures/` |
 
-Experiments use fixed seeds, so reruns give the same numbers. The calls to the language model were made with `gemini-3.5-flash-lite` and are cached.
+Experiments use fixed seeds, and the event-merging gate visits boroughs in sorted order, so reruns give the same numbers. Set `PYTHONHASHSEED=0` as well if you change the code. The calls to the language model were made with `gemini-3.5-flash-lite` and are cached. The triage experiment (E6) ran before the gate was made order-independent, so rerunning it may need new LLM calls.
 
 ## Tests
 

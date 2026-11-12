@@ -33,15 +33,18 @@ class EscalationGate:
         self.all_events: list[Event] = []
 
     def _components(self, flagged: set[str]) -> list[set[str]]:
+        # Sorted traversal, so the result does not depend on Python's per-process string hashing.
         components, remaining = [], set(flagged)
         while remaining:
-            frontier, component = [remaining.pop()], set()
+            start = min(remaining)
+            remaining.remove(start)
+            frontier, component = [start], set()
             while frontier:
                 code = frontier.pop()
                 component.add(code)
                 linked = set(self.adjacency[code]) & remaining
                 remaining -= linked
-                frontier.extend(linked)
+                frontier.extend(sorted(linked))
             components.append(component)
         return components
 

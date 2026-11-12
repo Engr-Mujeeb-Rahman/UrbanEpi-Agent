@@ -1,22 +1,54 @@
 {
  "trials": 400000,
  "institutions": 5,
- "note": "Empirical privacy audit for the paper: the check from the test suite, saved with its value. Passing supports correctness but does not prove privacy.",
+ "thresholds": 25,
+ "delta": 1e-06,
+ "note": "Empirical privacy audit for the paper: the check from the test suite, saved with its value. Passing supports correctness but does not prove privacy.\n\nTwo noise levels are audited for each claimed epsilon:\n- \"full_budget\": sigma set from the whole rho of that epsilon (the level used in the first version of this audit);\n- \"borough_table\": sigma set from 60% of rho, the noise the borough table actually releases.\nFor the borough table, the epsilon it can claim on its own is rho_b + 2 sqrt(rho_b ln(1/delta)), which is also saved.\nThe lower bound is log((TPR_low - delta) / FPR_high) over 25 thresholds, with Clopper-Pearson bounds Bonferroni-corrected to 95% overall.\n",
  "results": {
   "1.0": {
    "claimed": 1.0,
-   "audit_lower_bound": 0.525,
-   "sigma": 5.35
+   "full_budget": {
+    "rho": 0.01747,
+    "sigma": 5.35,
+    "epsilon_of_this_level": 1.0,
+    "audit_lower_bound": 0.525
+   },
+   "borough_table": {
+    "rho": 0.01048,
+    "sigma": 6.907,
+    "epsilon_of_this_level": 0.772,
+    "audit_lower_bound": 0.379
+   }
   },
   "2.0": {
    "claimed": 2.0,
-   "audit_lower_bound": 0.949,
-   "sigma": 2.72
+   "full_budget": {
+    "rho": 0.06757,
+    "sigma": 2.72,
+    "epsilon_of_this_level": 2.0,
+    "audit_lower_bound": 0.949
+   },
+   "borough_table": {
+    "rho": 0.04054,
+    "sigma": 3.512,
+    "epsilon_of_this_level": 1.537,
+    "audit_lower_bound": 0.701
+   }
   },
   "4.0": {
    "claimed": 4.0,
-   "audit_lower_bound": 2.206,
-   "sigma": 1.403
+   "full_budget": {
+    "rho": 0.25394,
+    "sigma": 1.403,
+    "epsilon_of_this_level": 4.0,
+    "audit_lower_bound": 2.206
+   },
+   "borough_table": {
+    "rho": 0.15236,
+    "sigma": 1.812,
+    "epsilon_of_this_level": 3.054,
+    "audit_lower_bound": 1.597
+   }
   }
  }
 }

@@ -7,6 +7,7 @@ from pathlib import Path
 
 import numpy as np
 
+DOC = __doc__
 source = Path("scripts/run_detection_experiments.py").read_text(encoding="utf8")
 exec(source[:source.index("started = time.time()")])
 
@@ -50,4 +51,4 @@ for epsilon, unit in CONFIGS:
         key = f"{unit}_eps{epsilon}_{name}"
         results[key] = {"threshold": summary(taus), "pod": {s: summary(v) for s, v in pods.items()}, "share_of_draws_reaching_target_at_80": round(float(np.mean(reaches)), 3), "pod_by_draw": {s: [round(x, 3) for x in v] for s, v in pods.items()}}
         print(key, json.dumps({k: results[key][k] for k in ("threshold", "pod", "share_of_draws_reaching_target_at_80")}), flush=True)
-OUT.joinpath("calibration_spread.json").write_text(json.dumps({"note": __doc__, "draws": DRAWS, "trials_per_size": TRIALS, "results": results}, indent=1), encoding="utf8")
+OUT.joinpath("calibration_spread.json").write_text(json.dumps({"note": DOC, "draws": DRAWS, "trials_per_size": TRIALS, "results": results}, indent=1), encoding="utf8")

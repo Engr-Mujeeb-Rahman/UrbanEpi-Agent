@@ -4,6 +4,7 @@ from pathlib import Path
 
 import numpy as np
 
+DOC = __doc__
 source = Path("scripts/run_detection_experiments.py").read_text(encoding="utf8")
 exec(source[:source.index("started = time.time()")])
 
@@ -32,4 +33,4 @@ for epsilon, unit in ((1, "record"), (2, "record"), (2, "person")):
         "binomial_sd": round(float(np.sqrt(mean * (1 - mean) / n)), 4), "corr_threshold_pod": round(float(np.corrcoef(taus, pods)[0, 1]), 3), "corr_threshold_chance": round(float(np.corrcoef(taus, chance)[0, 1]), 3),
         "pod_0_mean": round(float(np.mean(chance)), 3), "pod_0_min": round(min(chance), 3), "pod_0_max": round(max(chance), 3), "share_reaching_target": round(float(np.mean(np.array(pods) >= target_pod)), 3)}
     print(results[f"{unit}_eps{epsilon}"], flush=True)
-    OUT.joinpath("threshold_power.json").write_text(json.dumps({"note": __doc__, "results": results}, indent=1), encoding="utf8")
+    OUT.joinpath("threshold_power.json").write_text(json.dumps({"note": DOC, "results": results}, indent=1), encoding="utf8")

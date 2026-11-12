@@ -1,7 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the paper."
-title: "UrbanEpi-Agent: Privacy-Budgeted Federated Analytics and Selective LLM Reasoning for District-Level Disease Surveillance"
+title: "Privacy-Budgeted Federated Release with LLM Question Parsing for District-Level Disease Surveillance"
 authors:
+  - family-names: "Ullah"
+    given-names: "Khalil"
+    affiliation: "Department of Software Engineering, University of Malakand"
   - family-names: "Rahman"
     given-names: "Muhammad Mujeeb Ur"
     affiliation: "Department of Software Engineering, University of Malakand"

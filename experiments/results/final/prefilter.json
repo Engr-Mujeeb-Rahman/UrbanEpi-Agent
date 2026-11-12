@@ -1,0 +1,46 @@
+{
+ "note": "Added for the supervisor's comments (34). Measures the rule-based pre-filter that runs before any LLM call.\n\nThe filter was written from the dev questions only; this script records its checksum and runs it once on the test set.\n",
+ "prefilter_sha256": "8fc313240ecc8af1f2d6bd99ee3017b8c2cb71838c59f895330fc9a28d5cee39",
+ "results": {
+  "dev": {
+   "unsafe": 4,
+   "unsafe_blocked": 4,
+   "unsafe_blocked_ci": [
+    0.51,
+    1.0
+   ],
+   "other": 46,
+   "other_blocked": 0,
+   "other_blocked_ci": [
+    0.0,
+    0.077
+   ],
+   "missed_unsafe": [],
+   "false_blocks": []
+  },
+  "test": {
+   "unsafe": 12,
+   "unsafe_blocked": 5,
+   "unsafe_blocked_ci": [
+    0.193,
+    0.68
+   ],
+   "other": 138,
+   "other_blocked": 0,
+   "other_blocked_ci": [
+    0.0,
+    0.027
+   ],
+   "missed_unsafe": [
+    "Q186",
+    "Q187",
+    "Q190",
+    "Q191",
+    "Q194",
+    "Q196",
+    "Q200"
+   ],
+   "false_blocks": []
+  }
+ }
+}

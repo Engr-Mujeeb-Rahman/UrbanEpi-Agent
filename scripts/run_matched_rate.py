@@ -10,6 +10,7 @@ from pathlib import Path
 
 import numpy as np
 
+DOC = __doc__
 source = Path("scripts/run_detection_experiments.py").read_text(encoding="utf8")
 exec(source[:source.index("started = time.time()")])
 
@@ -112,7 +113,7 @@ for name, (sigma, scorer, k) in ARMS.items():
                      "at_calibrated": {"chance": round(c0, 3), "pod": {str(s): curve[str(s)][base_index] for s in SIZES[1:]}, "chance_adjusted_pod": adjusted},
                      "at_matched_chance": at_target}
     print(name, json.dumps({"tau0": results[name]["calibrated_threshold"], "c0": c0, "adj": adjusted, "c=0.15": at_target["0.15"], "c=0.2": at_target["0.2"]}), flush=True)
-    OUT.joinpath("matched_rate.json").write_text(json.dumps({"note": __doc__, "trials_per_size": TRIALS, "sizes": SIZES, "results": results}, indent=1), encoding="utf8")
+    OUT.joinpath("matched_rate.json").write_text(json.dumps({"note": DOC, "trials_per_size": TRIALS, "sizes": SIZES, "results": results}, indent=1), encoding="utf8")
 
 relative = {}
 expected = np.mean(base[test], axis=0)
@@ -125,4 +126,4 @@ for size in SIZES[1:]:
     relative[str(size)] = {"median_excess_over_expected_background": round(float(np.median(ratios)), 3),
                            "p10": round(float(np.percentile(ratios, 10)), 3), "p90": round(float(np.percentile(ratios, 90)), 3)}
 print(json.dumps(relative))
-OUT.joinpath("matched_rate.json").write_text(json.dumps({"note": __doc__, "trials_per_size": TRIALS, "sizes": SIZES, "relative_size": relative, "results": results}, indent=1), encoding="utf8")
+OUT.joinpath("matched_rate.json").write_text(json.dumps({"note": DOC, "trials_per_size": TRIALS, "sizes": SIZES, "relative_size": relative, "results": results}, indent=1), encoding="utf8")

@@ -254,3 +254,18 @@ def test_detection_helpers():
     assert low < 0.8 < high
     a, b = np.array([True] * 8 + [False] * 2), np.array([False] * 8 + [True] * 2)
     assert exact_mcnemar(a, a) == 1.0 and exact_mcnemar(a, b) < 0.2
+
+
+def test_gate_result_does_not_depend_on_string_hashing():
+    """Components are found in sorted order, so a run gives the same events under any PYTHONHASHSEED."""
+    import subprocess
+    import sys
+    code = ("from urbanepi.gate.events import EscalationGate;import numpy as np;"
+            "adj={'a':['b'],'b':['a','c'],'c':['b'],'d':['e'],'e':['d']};"
+            "g=EscalationGate(list('abcde'),adj,5.0,3.0,2,1);out=[]\n"
+            "for t,s in enumerate([[6,4,0,7,6],[0,6,6,6,0],[7,0,6,0,6]]):\n"
+            " out.append([sorted(e.boroughs) for e in g.step(t,np.array(s,float)).escalate])\n"
+            "print(out)")
+    runs = {subprocess.run([sys.executable, "-c", code], capture_output=True, text=True, env={**__import__("os").environ, "PYTHONHASHSEED": str(seed), "PYTHONPATH": str(__import__("pathlib").Path(__file__).resolve().parents[1] / "src")}).stdout
+            for seed in (1, 2, 3, 4)}
+    assert len(runs) == 1 and runs.pop().startswith("[[")

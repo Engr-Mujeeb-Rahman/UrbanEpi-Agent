@@ -1,0 +1,3 @@
+1.0 {'claimed': 1.0, 'full_budget': {'rho': 0.01747, 'sigma': 5.35, 'epsilon_of_this_level': 1.0, 'audit_lower_bound': 0.525}, 'borough_table': {'rho': 0.01048, 'sigma': 6.907, 'epsilon_of_this_level': 0.772, 'audit_lower_bound': 0.379}}
+2.0 {'claimed': 2.0, 'full_budget': {'rho': 0.06757, 'sigma': 2.72, 'epsilon_of_this_level': 2.0, 'audit_lower_bound': 0.949}, 'borough_table': {'rho': 0.04054, 'sigma': 3.512, 'epsilon_of_this_level': 1.537, 'audit_lower_bound': 0.701}}
+4.0 {'claimed': 4.0, 'full_budget': {'rho': 0.25394, 'sigma': 1.403, 'epsilon_of_this_level': 4.0, 'audit_lower_bound': 2.206}, 'borough_table': {'rho': 0.15236, 'sigma': 1.812, 'epsilon_of_this_level': 3.054, 'audit_lower_bound': 1.597}}

@@ -1,0 +1,183 @@
+# UrbanEpi-Agent base configuration. Parameter meanings are in Docs/design.md section 1.
+seed: 20261105
+
+data:
+  source_zip: data/raw/mexico/datos_abiertos_influenza_covid19_20250430.zip
+  source_member: COVID19MEXICO.csv
+  state_code: "09"
+  events_path: data/processed/events.parquet
+  report_path: experiments/results/phase2_etl_report.json
+  boroughs_path: data/public/boroughs.csv
+  ontology_path: data/public/ontology.json
+  adjacency_path: data/public/adjacency.json
+  ground_truth_dir: data/evaluator_only
+
+study:
+  start: "2024-01-01"
+  end: "2025-04-15"
+  window_days: 3
+  # A window belongs to the split containing its first day.
+  splits:
+    burn_in: ["2024-01-01", "2024-03-31"]
+    validation: ["2024-04-01", "2024-10-31"]
+    test: ["2024-11-01", "2025-04-15"]
+
+institutions:
+  # SECTOR code to node name, from the July 2024 dictionary.
+  "4": IMSS
+  "6": ISSSTE
+  "8": PEMEX
+  "12": SSA
+  "15": IMSS_BIENESTAR_OPD
+
+classification:
+  # Code 3 is defined as confirmed in the July 2024 dictionary, and matches the PCR codes on every record.
+  confirmed_code: "3"
+
+age_bands:
+  edges: [0, 5, 18, 50, 65, 200]
+  labels: ["0-4", "5-17", "18-49", "50-64", "65+"]
+
+conditions:
+  diabetes: DIABETES
+  copd: EPOC
+  asthma: ASMA
+  immunosuppressed: INMUSUPR
+  hypertension: HIPERTENSION
+  other_condition: OTRA_COM
+  cardiovascular: CARDIOVASCULAR
+  obesity: OBESIDAD
+  chronic_kidney: RENAL_CRONICA
+  smoker: TABAQUISMO
+
+injection:
+  excess_cases: [10, 20, 40, 80, 160, 320]
+  duration_days: [7, 14, 21]
+  max_extent: 3
+  lognormal_sigma: 0.6
+
+privacy:
+  delta: 1.0e-6
+  epsilons: [0.5, 1, 2, 4, 8]
+  budget_split:
+    borough_table: 0.6
+    citywide_table: 0.1
+    adhoc: 0.2
+    drilldown: 0.1
+  assumed_records_per_person: 4
+  # A record confirmed as both FLU and COVID appears in two citywide cells.
+  citywide_cells_per_record: 2
+  noise_scale_bits: 16
+
+go_no_go_1:
+  baseline_windows: 20
+  guard_windows: 2
+  alerts_per_30_days: 1
+  calibration_seeds: 20
+  trials_per_size: 200
+  duration_days: [7, 14, 21]
+  excess_cases: [0, 10, 20, 40, 80, 160, 320]
+  target_pod: 0.8
+  # Fixed before the run: 80 extra cases roughly doubles a typical borough over two weeks.
+  plausible_excess_cases: 80
+  decision_epsilon: 4
+
+agent:
+  protected_unit: record
+  planned_adhoc_queries: 20
+  rse_max: 0.5
+  # Rough public shares for predicting error before a fresh query. Not used in any released answer.
+  age_band_share: 0.2
+  condition_share: 0.2
+  unmonitored_syndrome_share: 0.03
+  confidence_z: 1.96
+  minimum_short_query_days: 14
+
+llm:
+  provider: gemini
+  model: gemini-3.5-flash-lite
+  prompt_version: parse_v5
+  triage_prompt: triage_v2
+  seconds_between_calls: 1.0
+  max_retries: 12
+  retry_wait_seconds: 30
+  temperature: 0
+  cache_dir: experiments/llm_cache
+  max_calls_per_run: 500
+
+gate_tuning:
+  # Fixed before the run. Pick the highest detection at selection_excess_cases among variants within both limits.
+  baseline_windows: 20
+  guard_windows: 2
+  slack: 0.5
+  null_seeds: 20
+  null_alerts_per_30_days: 1
+  trials_per_size: 200
+  excess_cases: [0, 40, 80, 160, 320]
+  settings: [["none", null], ["record", 2], ["person", 2]]
+  selection_setting: ["record", 2]
+  selection_excess_cases: 160
+  max_chance_pod: 0.15
+  max_real_alerts_per_30_days: 5
+
+gate:
+  # Chosen by the rule in gate_tuning on validation data (experiments/results/gate_tuning.json).
+  baseline_windows: 20
+  guard_windows: 2
+  slack: 0.5
+  memory_windows: 2
+  spatial_weight: 0.0
+  tau_lo_ratio: 0.6
+  cooldown_windows: 2
+  max_events_per_window: 3
+  null_alerts_per_30_days: 1
+  null_seeds: 20
+
+go_no_go_2:
+  epsilon: 2
+  unit: record
+  full_path_excess_cases: 160
+  fast_path_excess_cases: [160, 80, 0]
+  max_llm_calls: 80
+
+triage_check:
+  epsilon: 2
+  unit: record
+  alerts_per_group: 20
+  max_runs: 40
+  outbreak_windows: 4
+  excess_cases: 160
+  max_llm_calls: 100
+
+final_detection:
+  # Fixed before any test-period run.
+  excess_cases: [0, 10, 20, 40, 80, 160, 320]
+  trials_per_size: 200
+  target_pod: 0.8
+  borough_sizes: [40, 80, 160, 320]
+  trials_per_borough: 50
+  e4_epsilons: [1, 2, 4]
+  e5_epsilons: [1, 2, 4]
+  comparison_sizes: [80, 160, 320]
+  e7_sizes: [0, 80, 160, 320]
+  e7_trials: 100
+  e7_assumed_records: [2, 4, 8]
+  e7_window_days: [1, 3, 7]
+  e8_settings: [["record", 1], ["record", 2], ["record", 4], ["person", 2]]
+  e8_seeds: 50
+  wave_gap_windows: 4
+
+e2:
+  primary: ["record", 2]
+  settings: [["record", 2], ["record", 1], ["record", 4], ["person", 2]]
+  noise_seeds: 20
+
+e6:
+  epsilon: 2
+  unit: record
+  known_per_group: 40
+  max_runs: 80
+  outbreak_windows: 4
+  excess_cases: 160
+  max_real_alerts: 20
+  max_llm_calls: 140

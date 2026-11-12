@@ -1,0 +1,22 @@
+{
+ "trials": 400000,
+ "institutions": 5,
+ "note": "Empirical privacy audit for the paper: the check from the test suite, saved with its value. Passing supports correctness but does not prove privacy.",
+ "results": {
+  "1.0": {
+   "claimed": 1.0,
+   "audit_lower_bound": 0.525,
+   "sigma": 5.35
+  },
+  "2.0": {
+   "claimed": 2.0,
+   "audit_lower_bound": 0.949,
+   "sigma": 2.72
+  },
+  "4.0": {
+   "claimed": 4.0,
+   "audit_lower_bound": 2.206,
+   "sigma": 1.403
+  }
+ }
+}

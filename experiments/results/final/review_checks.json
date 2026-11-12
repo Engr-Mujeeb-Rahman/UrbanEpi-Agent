@@ -1,0 +1,76 @@
+{
+ "note": "E2: answer quality on the frozen test questions, using gold plans so parsing errors don't mix in.\n\nTrue counts come from the events table. Tests show the graph and table paths agree. Noise is added the way the system adds it.\n",
+ "allocation": {
+  "questions": 120,
+  "reused_with_no_fresh_noise": 30,
+  "fresh_with_identical_noise": 90,
+  "fresh_with_one_group": 88,
+  "fresh_with_different_noise": 0,
+  "different": []
+ },
+ "reference_alert_cells": [
+  {
+   "window_start": "2024-11-05",
+   "borough": "002",
+   "excess": 19.2,
+   "top_institution": "IMSS",
+   "top_share_of_positive_excess": 0.762
+  },
+  {
+   "window_start": "2024-11-05",
+   "borough": "015",
+   "excess": 15.1,
+   "top_institution": "IMSS",
+   "top_share_of_positive_excess": 0.84
+  },
+  {
+   "window_start": "2024-11-05",
+   "borough": "016",
+   "excess": 15.4,
+   "top_institution": "IMSS",
+   "top_share_of_positive_excess": 0.809
+  },
+  {
+   "window_start": "2025-01-07",
+   "borough": "006",
+   "excess": 23.8,
+   "top_institution": "IMSS",
+   "top_share_of_positive_excess": 0.913
+  },
+  {
+   "window_start": "2025-04-10",
+   "borough": "003",
+   "excess": 37.8,
+   "top_institution": "SSA",
+   "top_share_of_positive_excess": 0.376
+  },
+  {
+   "window_start": "2025-04-10",
+   "borough": "008",
+   "excess": 5.3,
+   "top_institution": "PEMEX",
+   "top_share_of_positive_excess": 0.592
+  },
+  {
+   "window_start": "2025-04-10",
+   "borough": "012",
+   "excess": 43.8,
+   "top_institution": "SSA",
+   "top_share_of_positive_excess": 0.493
+  },
+  {
+   "window_start": "2025-04-10",
+   "borough": "013",
+   "excess": 7.0,
+   "top_institution": "ISSSTE",
+   "top_share_of_positive_excess": 0.413
+  }
+ ],
+ "cells_with_one_institution_over_80pct": 3,
+ "payload": {
+  "cells_per_window": 18,
+  "bytes_per_cell": 8,
+  "bytes_per_institution_per_window": 144,
+  "note": "Computed, excluding protocol overhead and key exchange, which are not simulated."
+ }
+}

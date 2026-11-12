@@ -1,0 +1,20 @@
+{
+ "rows": 30,
+ "agree": 27,
+ "agreement": 0.9,
+ "wilson_95": [
+  0.744,
+  0.965
+ ],
+ "disagreements": {
+  "Q063": "Clarifying is right, but the intent is wrong. The user literally asked for a trend, so \"intent\": \"count\" contradicts the question. In Q053 and Q062 the intent was just a guess; here it’s a mistake. I also replaced the generic clarification text with the specific missing pieces.",
+  "Q097": "Codes and dates are right: “003” is Coyoacán, “012” is Tlalpan, March 2025. But grouping only by district risks adding flu and COVID together into one number per borough. The user asked for flu and COVID counts separately, so group_by needs \"syndrome\" too. If the engine always splits syndromes on its own, the original plan is fine, but stating it explicitly is safer.",
+  "Q098": "Same issue as Q097. Codes and dates are right (“015” is Cuauhtémoc, “017” is Venustiano Carranza, July 2024), but group_by needs \"syndrome\" so flu and COVID aren’t added together into one number per borough."
+ },
+ "adjudication": {
+  "Q063": "Gold-label error: intent should be trend. The clarification status, which is what the question tests, is unchanged.",
+  "Q097": "Not an error under the schema: a plan with several syndromes already returns one output per syndrome, and the plan language has no syndrome grouping.",
+  "Q098": "Same as Q097."
+ },
+ "gold_errors_after_adjudication": 1
+}

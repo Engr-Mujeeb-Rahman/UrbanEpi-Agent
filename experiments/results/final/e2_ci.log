@@ -1,0 +1,237 @@
+record 2 {
+ "full": {
+  "median_relative_error": 0.804,
+  "ci_coverage": 0.95,
+  "median_ci_width": 106.6,
+  "share_answered_free": 0.249,
+  "share_coarsened": 0.635,
+  "mean_rho_per_question": 0.000507,
+  "median_error_by_category": {
+   "lay": 0.668,
+   "multi": 0.225,
+   "simple": 1.058,
+   "trend_compare": 2.166
+  },
+  "median_error_multi_syndrome": 0.282
+ },
+ "no_reuse": {
+  "median_relative_error": 0.824,
+  "ci_coverage": 0.946,
+  "median_ci_width": 106.6,
+  "share_answered_free": 0.0,
+  "share_coarsened": 0.667,
+  "mean_rho_per_question": 0.000676,
+  "median_error_by_category": {
+   "lay": 0.752,
+   "multi": 0.194,
+   "simple": 1.037,
+   "trend_compare": 2.059
+  },
+  "median_error_multi_syndrome": 0.239,
+  "wilcoxon_p_vs_full": 0.5968,
+  "multi_syndrome_median_error_full_vs_arm": [
+   0.334,
+   0.3
+  ]
+ },
+ "uniform_allocation": {
+  "median_relative_error": 0.989,
+  "ci_coverage": 0.953,
+  "median_ci_width": 106.6,
+  "share_answered_free": 0.249,
+  "share_coarsened": 0.635,
+  "mean_rho_per_question": 0.000507,
+  "median_error_by_category": {
+   "lay": 0.748,
+   "multi": 0.181,
+   "simple": 1.009,
+   "trend_compare": 2.118
+  },
+  "median_error_multi_syndrome": 0.27,
+  "wilcoxon_p_vs_full": 0.87421,
+  "multi_syndrome_median_error_full_vs_arm": [
+   0.334,
+   0.28
+  ]
+ },
+ "no_coarsening": {
+  "median_relative_error": 1.084,
+  "ci_coverage": 0.953,
+  "median_ci_width": 106.6,
+  "share_answered_free": 0.167,
+  "share_coarsened": 0.0,
+  "mean_rho_per_question": 0.000563,
+  "median_error_by_category": {
+   "lay": 0.687,
+   "multi": 0.704,
+   "simple": 1.063,
+   "trend_compare": 1.954
+  },
+  "median_error_multi_syndrome": 0.314,
+  "wilcoxon_p_vs_full": 0.01382,
+  "multi_syndrome_median_error_full_vs_arm": [
+   0.334,
+   0.478
+  ]
+ },
+ "exact_term_no_ontology": {
+  "median_relative_error": 1.06,
+  "ci_coverage": 0.884,
+  "median_ci_width": 106.6,
+  "share_answered_free": 0.249,
+  "share_coarsened": 0.635,
+  "mean_rho_per_question": 0.000507,
+  "median_error_by_category": {
+   "lay": 1.059,
+   "multi": 0.291,
+   "simple": 1.115,
+   "trend_compare": 2.301
+  },
+  "median_error_multi_syndrome": 0.291,
+  "wilcoxon_p_vs_full": 0.07369,
+  "multi_syndrome_median_error_full_vs_arm": [
+   0.334,
+   0.334
+  ]
+ },
+ "bootstrap_ci_median_error": {
+  "full": [
+   0.53,
+   1.214
+  ],
+  "no_reuse": [
+   0.461,
+   1.312
+  ],
+  "uniform_allocation": [
+   0.416,
+   1.388
+  ],
+  "no_coarsening": [
+   0.684,
+   1.53
+  ],
+  "exact_term_no_ontology": [
+   0.957,
+   1.499
+  ]
+ },
+ "bootstrap_ci_median_paired_difference_full_minus_arm": {
+  "no_reuse": [
+   -0.018,
+   0.033
+  ],
+  "uniform_allocation": [
+   0.0,
+   0.0
+  ],
+  "no_coarsening": [
+   -0.103,
+   0.0
+  ],
+  "exact_term_no_ontology": [
+   -0.079,
+   0.0
+  ]
+ },
+ "query_capacity": {
+  "test_questions_answerable": 120,
+  "answered_free_from_released_cells": 29,
+  "fresh_budget_slots": 20,
+  "answerable_within_budget": 49,
+  "without_reuse": 20
+ }
+}
+record 1 {
+ "full": {
+  "median_relative_error": 1.55,
+  "ci_coverage": 0.949,
+  "median_ci_width": 209.7,
+  "share_answered_free": 0.254,
+  "share_coarsened": 0.792,
+  "mean_rho_per_question": 0.00013,
+  "median_error_by_category": {
+   "lay": 1.203,
+   "multi": 0.33,
+   "simple": 2.32,
+   "trend_compare": 4.297
+  },
+  "median_error_multi_syndrome": 0.397
+ },
+ "bootstrap_ci_median_error": {
+  "full": [
+   0.943,
+   2.828
+  ]
+ },
+ "bootstrap_ci_median_paired_difference_full_minus_arm": {},
+ "query_capacity": {
+  "test_questions_answerable": 120,
+  "answered_free_from_released_cells": 30,
+  "fresh_budget_slots": 20,
+  "answerable_within_budget": 50,
+  "without_reuse": 20
+ }
+}
+record 4 {
+ "full": {
+  "median_relative_error": 0.484,
+  "ci_coverage": 0.946,
+  "median_ci_width": 55.0,
+  "share_answered_free": 0.219,
+  "share_coarsened": 0.516,
+  "mean_rho_per_question": 0.001983,
+  "median_error_by_category": {
+   "lay": 0.361,
+   "multi": 0.18,
+   "simple": 0.489,
+   "trend_compare": 1.299
+  },
+  "median_error_multi_syndrome": 0.097
+ },
+ "bootstrap_ci_median_error": {
+  "full": [
+   0.278,
+   0.685
+  ]
+ },
+ "bootstrap_ci_median_paired_difference_full_minus_arm": {},
+ "query_capacity": {
+  "test_questions_answerable": 120,
+  "answered_free_from_released_cells": 26,
+  "fresh_budget_slots": 20,
+  "answerable_within_budget": 46,
+  "without_reuse": 20
+ }
+}
+person 2 {
+ "full": {
+  "median_relative_error": 1.059,
+  "ci_coverage": 0.952,
+  "median_ci_width": 106.6,
+  "share_answered_free": 0.247,
+  "share_coarsened": 0.67,
+  "mean_rho_per_question": 0.000509,
+  "median_error_by_category": {
+   "lay": 0.832,
+   "multi": 0.309,
+   "simple": 1.146,
+   "trend_compare": 2.754
+  },
+  "median_error_multi_syndrome": 0.362
+ },
+ "bootstrap_ci_median_error": {
+  "full": [
+   0.683,
+   1.619
+  ]
+ },
+ "bootstrap_ci_median_paired_difference_full_minus_arm": {},
+ "query_capacity": {
+  "test_questions_answerable": 120,
+  "answered_free_from_released_cells": 29,
+  "fresh_budget_slots": 20,
+  "answerable_within_budget": 49,
+  "without_reuse": 20
+ }
+}

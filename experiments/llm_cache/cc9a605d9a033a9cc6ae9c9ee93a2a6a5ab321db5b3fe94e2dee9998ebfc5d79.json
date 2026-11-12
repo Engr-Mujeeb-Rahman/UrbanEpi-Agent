@@ -1,0 +1,6 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_id": "cypher_repair_v1",
+ "prompt": "This Kùzu Cypher query failed for the question below. Fix it.\n\nQuestion: Show the monthly trend of influenza A H3 cases citywide during 2024.\nQuery: MATCH (c:CaseRecord)-[:CONFIRMED_AS]->(p:Pathogen)<-[:COVERS*1..4]-(s:Syndrome {name: 'FLU_A_H3'}) WHERE c.admitted >= date('2024-01-01') AND c.admitted <= date('2024-12-31') RETURN substring(toString(c.admitted), 0, 7) AS month, count(c) AS count ORDER BY month\nError: Catalog exception: function TOSTRING does not exist.\n\nReply with one JSON object and nothing else: {\"cypher\": \"<one read-only query, or null>\", \"refused\": true or false, \"needs_clarification\": \"<question, or null>\"}\n",
+ "response": "{\"cypher\": \"MATCH (c:CaseRecord)-[:CONFIRMED_AS]->(p:Pathogen)<-[:COVERS*1..4]-(s:Syndrome {name: 'FLU_A_H3'}) WHERE c.admitted >= date('2024-01-01') AND c.admitted <= date('2024-12-31') RETURN substring(CAST(c.admitted, 'STRING'), 0, 7) AS month, count(c) AS count ORDER BY month\", \"refused\": false, \"needs_clarification\": null}"
+}

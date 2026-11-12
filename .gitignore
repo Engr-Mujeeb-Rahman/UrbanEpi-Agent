@@ -1,0 +1,12 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+data/raw/*
+!data/raw/mexico/
+data/raw/mexico/*
+!data/raw/mexico/SHA256SUMS.txt
+data/processed/
+data/evaluator_only/

@@ -1,0 +1,22 @@
+{
+ "note": "Added for the November 2026 review (m9, M4). Power of the 40-versus-40 triage test, and measured triage prompt tokens.",
+ "power_fisher_two_sided_alpha_0.05": {
+  "per_group": 40,
+  "false_alert_confirm_rate": 0.7,
+  "simulations": 2000,
+  "power_by_true_alert_confirm_rate": {
+   "0.75": 0.044,
+   "0.8": 0.128,
+   "0.85": 0.264,
+   "0.9": 0.542,
+   "0.95": 0.816,
+   "1.0": 0.99
+  }
+ },
+ "triage_tokens": {
+  "prompts_counted": 30,
+  "median_prompt_tokens": 961.5,
+  "median_output_tokens": 180.0,
+  "method": "count_tokens on cached triage_v2 prompts and responses"
+ }
+}

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "UrbanEpi-Agent: Privacy-Budgeted Federated Analytics and Selective LLM Reasoning for District-Level Disease Surveillance"
+authors:
+  - family-names: "Rahman"
+    given-names: "Muhammad Mujeeb Ur"
+    affiliation: "Department of Software Engineering, University of Malakand"
+repository-code: "https://github.com/Engr-Mujeeb-Rahman/UrbanEpi-Agent"
+license: MIT

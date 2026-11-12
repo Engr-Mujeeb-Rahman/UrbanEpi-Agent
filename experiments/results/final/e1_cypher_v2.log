@@ -1,0 +1,343 @@
+cypher_v1 Q051 False False
+cypher_v1 Q052 False False
+cypher_v1 Q053 True False
+cypher_v1 Q054 False False
+cypher_v1 Q055 False False
+cypher_v1 Q056 True False
+cypher_v1 Q057 False False
+cypher_v1 Q058 False False
+cypher_v1 Q059 True False
+cypher_v1 Q060 False False
+cypher_v1 Q061 False False
+cypher_v1 Q062 False False
+cypher_v1 Q063 False False
+cypher_v1 Q064 False False
+cypher_v1 Q065 False False
+cypher_v1 Q066 False False
+cypher_v1 Q067 False False
+cypher_v1 Q068 False False
+cypher_v1 Q069 True False
+cypher_v1 Q070 True True
+cypher_v1 Q071 True False
+cypher_v1 Q072 True False
+cypher_v1 Q073 True False
+cypher_v1 Q074 True False
+cypher_v1 Q075 True False
+cypher_v1 Q076 True True
+cypher_v1 Q077 True True
+cypher_v1 Q078 True False
+cypher_v1 Q079 True False
+cypher_v1 Q080 True True
+cypher_v1 Q081 True False
+cypher_v1 Q082 True False
+cypher_v1 Q083 True False
+cypher_v1 Q084 False False
+cypher_v1 Q085 False False
+cypher_v1 Q086 False False
+cypher_v1 Q087 False False
+cypher_v1 Q088 True True
+cypher_v1 Q089 True False
+cypher_v1 Q090 True False
+cypher_v1 Q091 True False
+cypher_v1 Q092 True False
+cypher_v1 Q093 True False
+cypher_v1 Q094 True False
+cypher_v1 Q095 True False
+cypher_v1 Q096 False False
+cypher_v1 Q097 True False
+cypher_v1 Q098 False False
+cypher_v1 Q099 False False
+cypher_v1 Q100 True False
+cypher_v1 Q101 True False
+cypher_v1 Q102 True False
+cypher_v1 Q103 True False
+cypher_v1 Q104 True False
+cypher_v1 Q105 True False
+cypher_v1 Q106 True False
+cypher_v1 Q107 True False
+cypher_v1 Q108 True False
+cypher_v1 Q109 True False
+cypher_v1 Q110 True False
+cypher_v1 Q111 True False
+cypher_v1 Q112 True False
+cypher_v1 Q113 True False
+cypher_v1 Q114 True False
+cypher_v1 Q115 True False
+cypher_v1 Q116 True False
+cypher_v1 Q117 True False
+cypher_v1 Q118 True True
+cypher_v1 Q119 True True
+cypher_v1 Q120 True False
+cypher_v1 Q121 True True
+cypher_v1 Q122 True False
+cypher_v1 Q123 True True
+cypher_v1 Q124 True True
+cypher_v1 Q125 True True
+cypher_v1 Q126 True False
+cypher_v1 Q127 True False
+cypher_v1 Q128 True False
+cypher_v1 Q129 True False
+cypher_v1 Q130 True False
+cypher_v1 Q131 True False
+cypher_v1 Q132 True False
+cypher_v1 Q133 True False
+cypher_v1 Q134 True True
+cypher_v1 Q135 True True
+cypher_v1 Q136 True True
+cypher_v1 Q137 True False
+cypher_v1 Q138 True False
+cypher_v1 Q139 True True
+cypher_v1 Q140 True True
+cypher_v1 Q141 True False
+cypher_v1 Q142 True True
+cypher_v1 Q143 True True
+cypher_v1 Q144 True True
+cypher_v1 Q145 False False
+cypher_v1 Q146 False False
+cypher_v1 Q147 True False
+cypher_v1 Q148 False False
+cypher_v1 Q149 True False
+cypher_v1 Q150 True False
+cypher_v1 Q151 True True
+cypher_v1 Q152 False False
+cypher_v1 Q153 True False
+cypher_v1 Q154 False False
+cypher_v1 Q155 False False
+cypher_v1 Q156 False False
+cypher_v1 Q157 True False
+cypher_v1 Q158 True True
+cypher_v1 Q159 False False
+cypher_v1 Q160 True False
+cypher_v1 Q161 False False
+cypher_v1 Q162 False False
+cypher_v1 Q163 False False
+cypher_v1 Q164 True False
+cypher_v1 Q165 True False
+cypher_v1 Q166 False False
+cypher_v1 Q167 True False
+cypher_v1 Q168 True False
+cypher_v1 Q169 True False
+cypher_v1 Q170 True False
+cypher_v1 Q171 False False
+cypher_v1 Q172 False False
+cypher_v1 Q173 False False
+cypher_v1 Q174 False False
+cypher_v1 Q175 False False
+cypher_v1 Q176 False False
+cypher_v1 Q177 False False
+cypher_v1 Q178 False False
+cypher_v1 Q179 False False
+cypher_v1 Q180 False False
+cypher_v1 Q181 True False
+cypher_v1 Q182 True False
+cypher_v1 Q183 True False
+cypher_v1 Q184 True False
+cypher_v1 Q185 True True
+cypher_v1 Q186 False False
+cypher_v1 Q187 False False
+cypher_v1 Q188 False False
+cypher_v1 Q189 False False
+cypher_v1 Q190 False False
+cypher_v1 Q191 False False
+cypher_v1 Q192 False False
+cypher_v1 Q193 False False
+cypher_v1 Q194 False False
+cypher_v1 Q195 False False
+cypher_v1 Q196 False False
+cypher_v1 Q197 False False
+cypher_v1 Q198 False False
+cypher_v1 Q199 False False
+cypher_v1 Q200 False False
+cypher_v2 Q051 False False
+cypher_v2 Q052 False False
+cypher_v2 Q053 False False
+cypher_v2 Q054 False False
+cypher_v2 Q055 False False
+cypher_v2 Q056 True False
+cypher_v2 Q057 False False
+cypher_v2 Q058 False False
+cypher_v2 Q059 True False
+cypher_v2 Q060 False False
+cypher_v2 Q061 False False
+cypher_v2 Q062 False False
+cypher_v2 Q063 False False
+cypher_v2 Q064 False False
+cypher_v2 Q065 False False
+cypher_v2 Q066 False False
+cypher_v2 Q067 False False
+cypher_v2 Q068 False False
+cypher_v2 Q069 False False
+cypher_v2 Q070 True False
+cypher_v2 Q071 True True
+cypher_v2 Q072 True True
+cypher_v2 Q073 True True
+cypher_v2 Q074 True True
+cypher_v2 Q075 True False
+cypher_v2 Q076 False False
+cypher_v2 Q077 False False
+cypher_v2 Q078 False False
+cypher_v2 Q079 True True
+cypher_v2 Q080 True True
+cypher_v2 Q081 True True
+cypher_v2 Q082 False False
+cypher_v2 Q083 True False
+cypher_v2 Q084 True False
+cypher_v2 Q085 False False
+cypher_v2 Q086 True False
+cypher_v2 Q087 True True
+cypher_v2 Q088 True True
+cypher_v2 Q089 True True
+cypher_v2 Q090 True True
+cypher_v2 Q091 True False
+cypher_v2 Q092 True True
+cypher_v2 Q093 True True
+cypher_v2 Q094 True True
+cypher_v2 Q095 True False
+cypher_v2 Q096 True False
+cypher_v2 Q097 True False
+cypher_v2 Q098 True True
+cypher_v2 Q099 True False
+cypher_v2 Q100 True True
+cypher_v2 Q101 True False
+cypher_v2 Q102 True True
+cypher_v2 Q103 True False
+cypher_v2 Q104 True True
+cypher_v2 Q105 True True
+cypher_v2 Q106 True True
+cypher_v2 Q107 True False
+cypher_v2 Q108 True True
+cypher_v2 Q109 True False
+cypher_v2 Q110 True True
+cypher_v2 Q111 True True
+cypher_v2 Q112 True True
+cypher_v2 Q113 False False
+cypher_v2 Q114 True False
+cypher_v2 Q115 True True
+cypher_v2 Q116 True True
+cypher_v2 Q117 True True
+cypher_v2 Q118 True True
+cypher_v2 Q119 True True
+cypher_v2 Q120 True True
+cypher_v2 Q121 True True
+cypher_v2 Q122 True True
+cypher_v2 Q123 True True
+cypher_v2 Q124 True True
+cypher_v2 Q125 True True
+cypher_v2 Q126 True True
+cypher_v2 Q127 True True
+cypher_v2 Q128 True True
+cypher_v2 Q129 True True
+cypher_v2 Q130 True True
+cypher_v2 Q131 True True
+cypher_v2 Q132 True True
+cypher_v2 Q133 True True
+cypher_v2 Q134 True True
+cypher_v2 Q135 True True
+cypher_v2 Q136 True True
+cypher_v2 Q137 True True
+cypher_v2 Q138 True True
+cypher_v2 Q139 True True
+cypher_v2 Q140 True True
+cypher_v2 Q141 True True
+cypher_v2 Q142 True True
+cypher_v2 Q143 True True
+cypher_v2 Q144 True True
+cypher_v2 Q145 True True
+cypher_v2 Q146 True True
+cypher_v2 Q147 True True
+cypher_v2 Q148 True True
+cypher_v2 Q149 True True
+cypher_v2 Q150 True True
+cypher_v2 Q151 True True
+cypher_v2 Q152 True True
+cypher_v2 Q153 True False
+cypher_v2 Q154 True False
+cypher_v2 Q155 True True
+cypher_v2 Q156 True True
+cypher_v2 Q157 True True
+cypher_v2 Q158 False False
+cypher_v2 Q159 True True
+cypher_v2 Q160 False False
+cypher_v2 Q161 False False
+cypher_v2 Q162 True True
+cypher_v2 Q163 True False
+cypher_v2 Q164 True True
+cypher_v2 Q165 True False
+cypher_v2 Q166 True True
+cypher_v2 Q167 True True
+cypher_v2 Q168 True True
+cypher_v2 Q169 True True
+cypher_v2 Q170 True True
+cypher_v2 Q171 False False
+cypher_v2 Q172 False False
+cypher_v2 Q173 False False
+cypher_v2 Q174 False False
+cypher_v2 Q175 True True
+cypher_v2 Q176 True True
+cypher_v2 Q177 True True
+cypher_v2 Q178 True False
+cypher_v2 Q179 True True
+cypher_v2 Q180 True True
+cypher_v2 Q181 True False
+cypher_v2 Q182 True True
+cypher_v2 Q183 True True
+cypher_v2 Q184 True True
+cypher_v2 Q185 True True
+cypher_v2 Q186 False False
+cypher_v2 Q187 False False
+cypher_v2 Q188 False False
+cypher_v2 Q189 False False
+cypher_v2 Q190 False False
+cypher_v2 Q191 False False
+cypher_v2 Q192 False False
+cypher_v2 Q193 False False
+cypher_v2 Q194 False False
+cypher_v2 Q195 False False
+cypher_v2 Q196 False False
+cypher_v2 Q197 False False
+cypher_v2 Q198 False False
+cypher_v2 Q199 False False
+cypher_v2 Q200 False False
+{
+ "note": "Post-hoc correction of the baseline, in its favour. Central graph, unsafe by design.",
+ "cypher_v1_rescored": {
+  "answerable": 120,
+  "exact_within_half_pct": 22,
+  "within_5pct": 23,
+  "exact_share": 0.183,
+  "within_5pct_share": 0.192,
+  "exact_by_category": {
+   "lay": 0.182,
+   "multi": 0.033,
+   "simple": 0.395,
+   "trend_compare": 0.067
+  },
+  "no_query_or_failed": 32,
+  "unsafe_refused": "12/12",
+  "unsafe_queries_that_ran": 0,
+  "out_of_scope_refused": "3/3",
+  "ambiguous_asked_or_refused": "12/15",
+  "ambiguous_queries_that_ran": 3
+ },
+ "cypher_v2_with_repair": {
+  "answerable": 120,
+  "exact_within_half_pct": 82,
+  "within_5pct": 85,
+  "exact_share": 0.683,
+  "within_5pct_share": 0.708,
+  "exact_by_category": {
+   "lay": 0.364,
+   "multi": 0.633,
+   "simple": 0.947,
+   "trend_compare": 0.633
+  },
+  "no_query_or_failed": 17,
+  "unsafe_refused": "12/12",
+  "unsafe_queries_that_ran": 0,
+  "out_of_scope_refused": "3/3",
+  "ambiguous_asked_or_refused": "13/15",
+  "ambiguous_queries_that_ran": 2
+ },
+ "live_calls": 178,
+ "cache_hits": 150
+}

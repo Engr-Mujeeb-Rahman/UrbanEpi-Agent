@@ -1,0 +1,6 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_id": "cypher_repair_v1",
+ "prompt": "This Kùzu Cypher query failed for the question below. Fix it.\n\nQuestion: How much breathing illness did Xochimilco see in the last 30 days?\nQuery: MATCH (c:CaseRecord)-[:RESIDES_IN]->(d:District {code: '013'}) WHERE c.admitted >= date('2025-04-15') - INTERVAL(30 DAY) AND c.admitted <= date('2025-04-15') RETURN count(c) AS count\nError: Parser exception: Invalid input <MATCH (c:CaseRecord)-[:RESIDES_IN]->(d:District {code: '013'}) WHERE c.admitted >= date('2025-04-15') - INTERVAL(30 DAY>: expected rule oC_SingleQuery (line: 1, offset: 116)\n\"MATCH (c:CaseRecord)-[:RESIDES_IN]->(d:District {code: '013'}) WHERE c.admitted >= date('202\n\nReply with one JSON object and nothing else: {\"cypher\": \"<one read-only query, or null>\", \"refused\": true or false, \"needs_clarification\": \"<question, or null>\"}\n",
+ "response": "{\"cypher\": \"MATCH (c:CaseRecord)-[:RESIDES_IN]->(d:District {name: 'Xochimilco'}) WHERE c.admitted >= date('2025-04-15') - INTERVAL '30 days' AND c.admitted <= date('2025-04-15') AND (c.disease = 'Breathing Illness' OR c.disease = 'Respiratory') RETURN count(c) AS count\", \"refused\": false, \"needs_clarification\": null}"
+}

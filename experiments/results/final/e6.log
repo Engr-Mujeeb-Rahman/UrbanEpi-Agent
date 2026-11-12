@@ -1,0 +1,134 @@
+known_false 1 confirm confirm True
+known_false 2 confirm confirm True
+known_false 3 confirm confirm True
+known_true 4 confirm confirm True
+known_true 5 confirm confirm True
+known_false 6 confirm confirm True
+known_false 7 confirm confirm True
+known_true 8 confirm watch True
+known_true 9 confirm confirm True
+known_false 10 confirm confirm True
+known_false 11 confirm confirm True
+known_false 12 watch confirm True
+known_false 13 confirm confirm True
+known_false 14 confirm confirm True
+known_true 15 confirm confirm True
+known_true 16 watch confirm True
+known_false 17 confirm confirm True
+known_false 18 confirm confirm True
+known_false 19 confirm confirm True
+known_false 20 confirm confirm True
+known_false 21 confirm confirm True
+known_false 22 confirm confirm True
+known_false 23 confirm confirm True
+known_false 24 confirm confirm True
+known_false 25 watch confirm True
+known_true 26 confirm confirm True
+known_true 27 confirm confirm True
+known_false 28 confirm confirm True
+known_false 29 dismiss dismiss True
+known_true 30 confirm confirm True
+known_true 31 confirm confirm True
+known_false 32 watch confirm True
+known_false 33 confirm confirm True
+known_true 34 watch confirm True
+known_true 35 watch confirm True
+known_false 36 confirm confirm True
+known_false 37 watch confirm True
+known_false 38 watch confirm True
+known_true 39 confirm confirm True
+known_true 40 watch confirm True
+known_false 41 confirm watch True
+known_false 42 confirm confirm True
+known_false 43 watch confirm True
+known_false 44 confirm confirm True
+known_true 45 confirm confirm True
+known_false 46 dismiss dismiss True
+known_false 47 confirm confirm True
+known_false 48 confirm confirm True
+known_false 49 watch confirm True
+known_false 50 dismiss dismiss True
+known_true 51 confirm confirm True
+known_false 52 confirm confirm True
+known_false 53 confirm confirm True
+known_false 54 confirm confirm True
+known_false 55 watch confirm True
+known_true 56 confirm confirm True
+known_true 57 confirm confirm True
+known_true 58 confirm confirm True
+known_false 59 watch confirm True
+known_true 60 watch confirm True
+known_true 61 confirm confirm True
+known_true 62 confirm confirm True
+known_true 63 confirm confirm True
+known_true 64 confirm confirm True
+known_true 65 dismiss confirm True
+known_true 66 confirm confirm True
+known_true 67 confirm confirm True
+known_true 68 confirm confirm True
+known_true 69 confirm confirm True
+known_true 70 confirm confirm True
+known_true 71 confirm confirm True
+known_true 72 watch confirm True
+known_true 73 dismiss confirm True
+known_true 74 confirm confirm True
+known_true 75 confirm confirm True
+known_true 76 confirm confirm True
+known_true 77 dismiss confirm True
+known_true 78 confirm confirm True
+known_true 79 confirm confirm True
+known_true 80 watch confirm True
+real_unlabeled 81 confirm confirm True
+real_unlabeled 82 confirm confirm True
+real_unlabeled 83 dismiss confirm True
+real_unlabeled 84 confirm confirm True
+real_unlabeled 85 watch confirm True
+real_unlabeled 86 confirm confirm True
+{
+ "note": "Known labels come from a simulated background. Real-data alerts have no labels.",
+ "prompt": "triage_v2",
+ "model": "gemini-3.5-flash-lite",
+ "epsilon": 2,
+ "unit": "record",
+ "threshold": 3.7,
+ "dispersion": 3.33,
+ "groups": {
+  "known_false": 40,
+  "known_true": 40,
+  "real_unlabeled": 6
+ },
+ "llm": {
+  "confirm_rate_true": 0.75,
+  "confirm_rate_false": 0.7,
+  "dismiss_rate_true": 0.075,
+  "dismiss_rate_false": 0.075,
+  "precision_of_confirm_at_equal_groups": 0.517,
+  "fisher_p_confirm": 0.8027
+ },
+ "simple_rule": {
+  "confirm_rate_true": 0.975,
+  "confirm_rate_false": 0.9,
+  "dismiss_rate_true": 0.0,
+  "dismiss_rate_false": 0.075,
+  "precision_of_confirm_at_equal_groups": 0.52,
+  "fisher_p_confirm": 0.3589
+ },
+ "confirm_everything": {
+  "confirm_rate_true": 1.0,
+  "confirm_rate_false": 1.0,
+  "precision_of_confirm_at_equal_groups": 0.5
+ },
+ "llm_vs_rule_agreement": 0.738,
+ "real_verdicts": {
+  "confirm": 4,
+  "dismiss": 1,
+  "watch": 1
+ },
+ "grounded_first_try": 0.965,
+ "grounded_final": 1.0,
+ "fallbacks": 0,
+ "live_calls": 87,
+ "cache_hits": 2,
+ "chars_in": 286555,
+ "chars_out": 53073
+}

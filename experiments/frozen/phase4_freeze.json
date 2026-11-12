@@ -1,0 +1,13 @@
+{
+ "date": "2026-11-06",
+ "note": "No git repository, so checksums stand in for a commit. Changing any file below after this date is a logged deviation.",
+ "files": {
+  "data/benchmark/urbanepi_q.jsonl": "fe635090f6435b77ad29b2cef0e530eeef73cccd6c492a1962fc79b6c8d8954e",
+  "src/urbanepi/llm/prompts/parse_v5.txt": "7c19cd2e39a6490808dc81995ad6201034bd1fe02d831485177936b3732cb618",
+  "src/urbanepi/llm/prompts/repair_v1.txt": "9f77767bd49af6a8dc13f0fc493172aad8d70d10de594fc74e056fe6620bdfb7",
+  "data/public/ontology.json": "955fb15c2e185024a3f4f408155a4315ce966f4a4b8c2b05df16411c4b3522b0"
+ },
+ "model": "gemini-3.5-flash-lite",
+ "test_questions": 150,
+ "test_split_run": false
+}

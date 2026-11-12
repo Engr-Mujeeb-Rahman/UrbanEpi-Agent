@@ -1,0 +1,6 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_id": "cypher_repair_v1",
+ "prompt": "This Kùzu Cypher query failed for the question below. Fix it.\n\nQuestion: Compare the respiratory rate per 100,000 in Xochimilco with Coyoacán in December 2024.\nQuery: MATCH (d:District)<-[:RESIDES_IN]-(c:CaseRecord) WHERE d.code IN ['013', '003'] AND c.admitted >= date('2024-12-01') AND c.admitted <= date('2024-12-31') WITH d, count(c) AS case_count RETURN d.code AS district_code, d.name AS district_name, case_count, CASE d.code WHEN '013' THEN CAST(case_count, 'DOUBLE') * 100000 / 442178 WHEN '003' THEN CAST(case_count, 'DOUBLE') * 100000 / 614447 END AS rate_per_100k\nError: Binder exception: Cannot find property name for d.\n\nReply with one JSON object and nothing else: {\"cypher\": \"<one read-only query, or null>\", \"refused\": true or false, \"needs_clarification\": \"<question, or null>\"}\n",
+ "response": "{\"cypher\": \"MATCH (d:District)<-[:RESIDES_IN]-(c:CaseRecord) WHERE d.code IN ['013', '003'] AND c.admitted >= date('2024-12-01') AND c.admitted <= date('2024-12-31') WITH d, count(c) AS case_count RETURN d.code AS district_code, case_count, CASE d.code WHEN '013' THEN CAST(case_count, 'DOUBLE') * 100000 / 442178 WHEN '003' THEN CAST(case_count, 'DOUBLE') * 100000 / 614447 END AS rate_per_100k\", \"refused\": false, \"needs_clarification\": null}"
+}

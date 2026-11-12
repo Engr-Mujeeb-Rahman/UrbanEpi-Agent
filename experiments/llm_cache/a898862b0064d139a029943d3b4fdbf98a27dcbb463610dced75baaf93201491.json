@@ -1,0 +1,6 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_id": "cypher_repair_v1",
+ "prompt": "This Kùzu Cypher query failed for the question below. Fix it.\n\nQuestion: Compare RSV cases in Azcapotzalco and Coyoacán during October 2024.\nQuery: MATCH (c:CaseRecord)-[:RESIDES_IN]->(d:District), (s:Syndrome {name: 'RSV'})-[:COVERS*0..3]->(p:Pathogen), (c)-[:CONFIRMED_AS]->(p) WHERE d.code IN ['002', '003'] AND c.admitted >= date('2024-10-01') AND c.admitted <= date('2024-10-31') RETURN d.code AS district_code, d.name AS district_name, COUNT(c) AS rsv_cases\nError: Binder exception: Cannot find property name for d.\n\nReply with one JSON object and nothing else: {\"cypher\": \"<one read-only query, or null>\", \"refused\": true or false, \"needs_clarification\": \"<question, or null>\"}\n",
+ "response": "{\"cypher\": \"MATCH (c:CaseRecord)-[:RESIDES_IN]->(d:District), (s:Syndrome {name: 'RSV'})-[:COVERS*0..3]->(p:Pathogen), (c)-[:CONFIRMED_AS]->(p) WHERE d.name IN ['Azcapotzalco', 'Coyoacán'] AND c.admitted >= date('2024-10-01') AND c.admitted <= date('2024-10-31') RETURN d.name AS district_name, COUNT(c) AS rsv_cases\", \"refused\": false, \"needs_clarification\": null}"
+}

@@ -1,0 +1,220 @@
+{
+ "source": "PCR codes from the Secretaría de Salud dictionary of July 2024 (data/public/pcr_codes.csv). The grouping is ours.",
+ "syndromes": {
+  "RESP": {
+   "includes": [
+    "FLU",
+    "COVID",
+    "RSV",
+    "RHINO_ENTERO",
+    "PARAINFLUENZA",
+    "SEASONAL_CORONA",
+    "ADENOVIRUS",
+    "METAPNEUMOVIRUS",
+    "BOCAVIRUS"
+   ],
+   "pcr_codes": [],
+   "aliases": [
+    "respiratory illness",
+    "respiratory cases",
+    "suspected viral respiratory cases",
+    "breathing illness"
+   ],
+   "label": "suspected respiratory"
+  },
+  "FLU": {
+   "includes": [
+    "FLU_A",
+    "FLU_B"
+   ],
+   "pcr_codes": [],
+   "aliases": [
+    "flu",
+    "influenza",
+    "gripe"
+   ],
+   "label": "influenza"
+  },
+  "FLU_A": {
+   "includes": [
+    "FLU_A_H1N1PDM",
+    "FLU_A_H1",
+    "FLU_A_H3",
+    "FLU_A_H5",
+    "FLU_A_UNSUBTYPED"
+   ],
+   "pcr_codes": [],
+   "aliases": [
+    "influenza A",
+    "flu A"
+   ],
+   "label": "influenza A"
+  },
+  "FLU_A_H1N1PDM": {
+   "includes": [],
+   "pcr_codes": [
+    "1"
+   ],
+   "aliases": [
+    "H1N1",
+    "pandemic H1N1",
+    "swine flu"
+   ],
+   "label": "influenza A H1N1 pandemic strain"
+  },
+  "FLU_A_H1": {
+   "includes": [],
+   "pcr_codes": [
+    "2"
+   ],
+   "aliases": [
+    "influenza A H1"
+   ],
+   "label": "influenza A H1"
+  },
+  "FLU_A_H3": {
+   "includes": [],
+   "pcr_codes": [
+    "3"
+   ],
+   "aliases": [
+    "H3",
+    "H3N2",
+    "influenza A H3"
+   ],
+   "label": "influenza A H3"
+  },
+  "FLU_A_H5": {
+   "includes": [],
+   "pcr_codes": [
+    "14"
+   ],
+   "aliases": [
+    "H5",
+    "influenza A H5",
+    "bird flu"
+   ],
+   "label": "influenza A H5"
+  },
+  "FLU_A_UNSUBTYPED": {
+   "includes": [],
+   "pcr_codes": [
+    "13"
+   ],
+   "aliases": [
+    "unsubtyped influenza A"
+   ],
+   "label": "influenza A, unsubtyped"
+  },
+  "FLU_B": {
+   "includes": [],
+   "pcr_codes": [
+    "4"
+   ],
+   "aliases": [
+    "influenza B",
+    "flu B"
+   ],
+   "label": "influenza B"
+  },
+  "COVID": {
+   "includes": [],
+   "pcr_codes": [
+    "34"
+   ],
+   "aliases": [
+    "covid",
+    "covid-19",
+    "coronavirus",
+    "sars-cov-2"
+   ],
+   "label": "COVID-19"
+  },
+  "RSV": {
+   "includes": [],
+   "pcr_codes": [
+    "11",
+    "20",
+    "21"
+   ],
+   "aliases": [
+    "RSV",
+    "respiratory syncytial virus"
+   ],
+   "label": "RSV"
+  },
+  "RHINO_ENTERO": {
+   "includes": [],
+   "pcr_codes": [
+    "28"
+   ],
+   "aliases": [
+    "rhinovirus",
+    "enterovirus",
+    "common cold virus"
+   ],
+   "label": "rhinovirus/enterovirus"
+  },
+  "PARAINFLUENZA": {
+   "includes": [],
+   "pcr_codes": [
+    "8",
+    "9",
+    "10",
+    "32"
+   ],
+   "aliases": [
+    "parainfluenza"
+   ],
+   "label": "parainfluenza"
+  },
+  "SEASONAL_CORONA": {
+   "includes": [],
+   "pcr_codes": [
+    "22",
+    "23",
+    "25",
+    "26"
+   ],
+   "aliases": [
+    "seasonal coronavirus",
+    "229E",
+    "OC43",
+    "NL63",
+    "HKU1"
+   ],
+   "label": "seasonal coronavirus"
+  },
+  "ADENOVIRUS": {
+   "includes": [],
+   "pcr_codes": [
+    "7"
+   ],
+   "aliases": [
+    "adenovirus"
+   ],
+   "label": "adenovirus"
+  },
+  "METAPNEUMOVIRUS": {
+   "includes": [],
+   "pcr_codes": [
+    "29"
+   ],
+   "aliases": [
+    "metapneumovirus",
+    "hMPV"
+   ],
+   "label": "metapneumovirus"
+  },
+  "BOCAVIRUS": {
+   "includes": [],
+   "pcr_codes": [
+    "37"
+   ],
+   "aliases": [
+    "bocavirus"
+   ],
+   "label": "bocavirus"
+  }
+ }
+}

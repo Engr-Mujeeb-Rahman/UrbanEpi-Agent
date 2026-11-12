@@ -1,0 +1,14 @@
+Your earlier JSON query plan was invalid. Fix it, and reply with one corrected JSON object and nothing else.
+
+Today's date is {{as_of}}.
+
+Allowed values:
+{{schema}}
+
+Question: {{question}}
+
+Earlier plan:
+{{previous}}
+
+Errors:
+{{errors}}

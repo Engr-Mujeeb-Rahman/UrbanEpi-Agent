@@ -1,0 +1,6 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_id": "cypher_repair_v1",
+ "prompt": "This Kùzu Cypher query failed for the question below. Fix it.\n\nQuestion: Show COVID-19 and respiratory case counts for the whole city in May 2024.\nQuery: MATCH (c:CaseRecord) WHERE c.admitted >= date('2024-05-01') AND c.admitted <= date('2024-05-31') WITH count(c) AS total_resp MATCH (c2:CaseRecord)-[:CONFIRMED_AS]->(p:Pathogen) WHERE c2.admitted >= date('2024-05-01') AND c2.admitted <= date('2024-05-31') AND (p.name = 'COVID' OR (()-[:INCLUDES*0..3 {name: 'COVID'}]->(p) OR ()-[:COVERS]->(p))) WITH total_resp, count(DISTINCT c2) AS covid_cases RETURN total_resp, covid_cases\nError: Binder exception: Cannot find property name for .\n\nReply with one JSON object and nothing else: {\"cypher\": \"<one read-only query, or null>\", \"refused\": true or false, \"needs_clarification\": \"<question, or null>\"}\n",
+ "response": "{\"cypher\": \"MATCH (c:CaseRecord)-[:CONFIRMED_AS]->(p:Pathogen) WHERE c.admitted >= date('2024-05-01') AND c.admitted <= date('2024-05-31') WITH count(c) AS total_resp, sum(CASE WHEN p.id = 'COVID-19' OR p.id = 'COVID' THEN 1 ELSE 0 END) AS covid_cases RETURN total_resp, covid_cases\", \"refused\": false, \"needs_clarification\": null}"
+}

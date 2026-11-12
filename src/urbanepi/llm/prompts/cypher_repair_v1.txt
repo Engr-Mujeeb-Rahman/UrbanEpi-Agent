@@ -1,0 +1,7 @@
+This Kùzu Cypher query failed for the question below. Fix it.
+
+Question: {{question}}
+Query: {{query}}
+Error: {{error}}
+
+Reply with one JSON object and nothing else: {"cypher": "<one read-only query, or null>", "refused": true or false, "needs_clarification": "<question, or null>"}

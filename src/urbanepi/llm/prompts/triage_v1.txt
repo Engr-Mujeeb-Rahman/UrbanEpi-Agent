@@ -1,0 +1,22 @@
+You support a city epidemiologist who monitors suspected viral respiratory cases at sentinel units in Mexico City.
+A statistical gate flagged the event below. Decide how much attention it deserves, then write a short briefing.
+
+All values are released with privacy noise, so small differences may be noise. Reporting changes at a health institution can also cause jumps, and this data can't rule them out.
+
+Evidence:
+{{evidence}}
+
+Feedback on your previous attempt: {{feedback}}
+
+Reply with one JSON object and nothing else, with these fields:
+- verdict: "confirm" if the rise clearly exceeds noise and baseline, and deserves prompt human review; "watch" if it's uncertain; "dismiss" if it's likely noise or too small to matter
+- confidence: a number from 0 to 1
+- rationale: one or two sentences explaining the verdict
+- briefing: three sentences or fewer for the epidemiologist: what rose, where, and how uncertain it is
+- evidence_refs: the "ref" values you relied on
+
+Rules:
+- Use only numbers and dates exactly as they appear in the evidence. Don't calculate new numbers, such as percentages. You may round to fewer decimals.
+- Avoid numerals that aren't in the evidence. Write "three windows" in words, for example.
+- Don't name a cause or pathogen unless the citywide values support it, and describe it only as a possibility.
+- Don't give medical advice or recommend actions on individuals.

@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-06",
+ "note": "Gate settings and triage prompt fixed before any test-period run. Thresholds are recomputed by this method for each setting, from validation-period released values only.",
+ "gate": {
+  "memory_windows": 2,
+  "spatial_weight": 0.0,
+  "baseline_windows": 20,
+  "guard_windows": 2,
+  "slack": 0.5,
+  "tau_lo_ratio": 0.6,
+  "cooldown_windows": 2,
+  "max_events_per_window": 3,
+  "null_alerts_per_30_days": 1
+ },
+ "files": {
+  "src/urbanepi/llm/prompts/triage_v2.txt": "46a0cd11ffc8649e584b1f09fb9a390638185b72fcc2f314da48fa21ee62fea3",
+  "src/urbanepi/gate/naeg.py": "8c4ac9265e5764828127b6fe95ea1f484a810f98311faf179a09df42eeee8792",
+  "src/urbanepi/gate/events.py": "6197b4c0b4e3acb6a9ff0348ff23c5a0ee3750f2134dcb3eee61c88ca2f59efc",
+  "src/urbanepi/gate/thresholds.py": "033c78486c1f3753f296928fa2dc4fb934a8e38c92ea321de76ddae67546f0b2"
+ }
+}

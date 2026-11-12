@@ -1,0 +1,81 @@
+{
+ "note": "Frozen test period.",
+ "trials_per_size": null,
+ "seed": 20261105,
+ "results": {
+  "reference_threshold": 4.5,
+  "reference_alerts": [
+   {
+    "window_start": "2024-11-05",
+    "boroughs": [
+     "002",
+     "015",
+     "016"
+    ]
+   },
+   {
+    "window_start": "2025-01-07",
+    "boroughs": [
+     "006"
+    ]
+   },
+   {
+    "window_start": "2025-04-10",
+    "boroughs": [
+     "003",
+     "008",
+     "012",
+     "013"
+    ]
+   }
+  ],
+  "record_eps1": {
+   "sigma": 6.91,
+   "threshold": 3.25,
+   "share_found": 0.933,
+   "per_wave_share_found": [
+    0.98,
+    0.82,
+    1.0
+   ],
+   "mean_delay_windows": 0.63,
+   "median_delay_windows": 0.0
+  },
+  "record_eps2": {
+   "sigma": 3.51,
+   "threshold": 3.6,
+   "share_found": 1.0,
+   "per_wave_share_found": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean_delay_windows": 0.34,
+   "median_delay_windows": 0.0
+  },
+  "record_eps4": {
+   "sigma": 1.81,
+   "threshold": 4.1,
+   "share_found": 1.0,
+   "per_wave_share_found": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean_delay_windows": 0.21,
+   "median_delay_windows": 0.0
+  },
+  "person_eps2": {
+   "sigma": 7.02,
+   "threshold": 3.05,
+   "share_found": 0.967,
+   "per_wave_share_found": [
+    1.0,
+    0.9,
+    1.0
+   ],
+   "mean_delay_windows": 0.74,
+   "median_delay_windows": 0.0
+  }
+ }
+}
